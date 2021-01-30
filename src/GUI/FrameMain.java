@@ -122,7 +122,7 @@ public class FrameMain extends JFrame implements Runnable, ActionListener {
 	// 서버 접속 METHOD
 	private void connectServer(String userName) {
 		try {
-			Socket socket = new Socket("192.168.7.113", 10000);
+			Socket socket = new Socket("localhost", 10000);
 			this.outputStream = new ObjectOutputStream(socket.getOutputStream());
 			this.inputStream = new ObjectInputStream(socket.getInputStream());
 			this.user = new User(userName, socket, outputStream);
